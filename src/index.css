@@ -4,19 +4,19 @@
 /* Root Variables */
 :root {
   /* Background color */
-  --color-background: hsl(0, 0%, 95%) #f2f2f2;
+  --color-background: hsl(0, 0%, 95%) // #f2f2f2;;
 
   /* Primary Text Color (Dark) - Grounded with sophistication */
-  --color-dark: hsl(336, 37%, 31%) #732952;
+  --color-dark: hsl(336, 37%, 31%);
 
   /* Secondary Text Color - Fresh Mint Green */
-  --color-secondary: hsl(172, 40%, 44%) #49a69c;
+  --color-secondary: hsl(172, 40%, 44%) // #49a69c;;
 
   /* Accent Color - Soft Green for highlights */
-  --color-accent: hsl(150, 25%, 60%) #80bfb4;
+  --color-accent: hsl(150, 25%, 60%) // #80bfb4;;
 
   /* Darker shades for emphasis (used for borders, footer, etc.) */
-  --color-darkest-2: hsl(336, 38%, 42%) #8c326d;
+  --color-darkest-2: hsl(336, 38%, 42%) // #8c326d;;
 
   --font-primary: "Poppins", sans-serif;
   --font-secondary: "Merriweather", serif;

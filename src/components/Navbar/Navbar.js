@@ -17,7 +17,7 @@ const Navbar = () => {
 
       {/* Hamburger Menu */}
       <button
-        className="navbar-hamburger"
+        className={`navbar-hamburger ${isMenuOpen ? "open" : ""}`}
         aria-label="Toggle navigation menu"
         aria-expanded={isMenuOpen}
         onClick={handleMenuToggle}
