@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Logo Section */}
       <a href="#home" className="navbar-logo" aria-label="Go to home">
-        <img src="/assets/images/portfolio-logo.png" alt="Logo" />
+        <img src="/assets/images/tech-with-heart-logo.png" alt="Logo" />
       </a>
 
       {/* Hamburger Menu */}
