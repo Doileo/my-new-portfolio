@@ -3,6 +3,7 @@ import "./index.css";
 
 // Import components
 import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
 // import Footer from "./components/Footer";
 
 // Import pages (if you plan to use them later)
@@ -19,6 +20,9 @@ const App = () => {
     <div className="App">
       {/* Navbar Component */}
       <Navbar />
+
+      {/* Hero Component */}
+      <Hero />
 
       {/* Routes for different pages (If needed in the future) */}
       {/* 
