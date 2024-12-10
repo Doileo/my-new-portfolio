@@ -1,0 +1,69 @@
+.hero-section {
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.hero-heading {
+  font-family: var(--font-primary);
+  color: var(--color-dark);
+  font-size: 2.5rem;
+}
+
+.hero-subheading {
+  font-family: var(--font-secondary);
+  color: var(--color-dark);
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.hero-subheading span {
+  font-weight: bold;
+  color: var(--color-accent);
+  display: inline-block;
+  font-size: 1.6rem;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.hero-buttons .btn {
+  padding: 12px 25px;
+  background-color: transparent;
+  border: 2px solid var(--color-accent);
+  color: var(--color-dark);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-buttons .btn:hover {
+  background-color: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.hero-buttons .btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

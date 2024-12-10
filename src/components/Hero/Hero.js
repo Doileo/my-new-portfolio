@@ -15,7 +15,7 @@ const Hero = () => {
       setTextIndex((prevIndex) => (prevIndex + 1) % phrases.length);
     }, 3000);
 
-    return () => clearInterval(interval); // cleanup on component unmount
+    return () => clearInterval(interval); // Cleanup on component unmount
   }, [phrases.length]);
 
   return (
@@ -48,13 +48,27 @@ const Hero = () => {
         Hi, I'm Doina.
       </motion.h1>
 
+      {/* Smooth changing text with framer motion */}
       <motion.p
         className="hero-subheading"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
+        transition={{
+          delay: 1,
+          duration: 1,
+          ease: "easeOut",
+        }}
       >
-        A Front-end Developer who <span>{phrases[textIndex]}</span>
+        A Front-end Developer who{" "}
+        <motion.span
+          key={phrases[textIndex]} // This ensures smooth transition between the phrases
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }}
+        >
+          {phrases[textIndex]}
+        </motion.span>
       </motion.p>
 
       {/* Buttons */}
