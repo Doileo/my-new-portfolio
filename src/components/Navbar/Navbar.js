@@ -30,13 +30,6 @@ const Navbar = () => {
       {/* Navigation Links */}
       <div className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
         <a
-          href="#home"
-          className="navbar-link"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Home
-        </a>
-        <a
           href="#about"
           className="navbar-link"
           onClick={() => setIsMenuOpen(false)}

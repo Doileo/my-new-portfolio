@@ -27,7 +27,6 @@ const App = () => {
       {/* Routes for different pages (If needed in the future) */}
       {/* 
       <Switch>
-        <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/skills" component={Skills} />
         <Route path="/projects" component={Projects} />
