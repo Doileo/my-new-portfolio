@@ -131,11 +131,6 @@
   animation-delay: 1.1s;
 }
 
-/*.navbar-link:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-background);
-}*/
-
 /* Slide-in effect from top */
 @keyframes slideInFromTop {
   0% {
@@ -160,7 +155,6 @@
   .navbar-logo {
     display: flex;
     align-items: center;
-    margin-left: 1rem;
   }
 
   .navbar-logo img {
@@ -172,7 +166,7 @@
   .navbar-links {
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 2.5rem;
     position: static;
     box-shadow: none;
     transform: none;
