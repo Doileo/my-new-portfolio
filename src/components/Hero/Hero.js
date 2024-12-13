@@ -20,7 +20,56 @@ const Hero = () => {
 
   return (
     <section className="hero-section">
-      {/* Motion.div for animated blooming effect */}
+      {/* Left Column for Heading, Subheading, and Buttons */}
+      <div className="hero-text-container">
+        <motion.h1
+          className="hero-heading"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
+          Hi, I'm Doina.
+        </motion.h1>
+
+        {/* Smooth changing text with framer motion */}
+        <motion.p
+          className="hero-subheading"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            delay: 1,
+            duration: 1,
+            ease: "easeOut",
+          }}
+        >
+          A Front-end Developer who{" "}
+          <motion.span
+            key={phrases[textIndex]} // This ensures smooth transition between the phrases
+            initial={{ opacity: 0, y: 20 }} // Start below and fade in
+            animate={{
+              opacity: 1,
+              y: 0, // Move to original position
+            }}
+            exit={{ opacity: 0, y: 20 }} // Fade out and move down
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            {phrases[textIndex]}
+          </motion.span>
+        </motion.p>
+
+        {/* Buttons */}
+        <motion.div
+          className="hero-buttons"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 1 }}
+        >
+          <button className="btn btn-download-cv">Download CV</button>
+          <button className="btn btn-contact">Contact</button>
+        </motion.div>
+      </div>
+
+      {/* Right Column for the Flower Image */}
       <motion.div
         className="hero-image"
         animate={{
@@ -36,50 +85,6 @@ const Hero = () => {
           src={process.env.PUBLIC_URL + "/assets/images/hero-image.svg"}
           alt="Animated flower blooming"
         />
-      </motion.div>
-
-      {/* Heading and Subheading */}
-      <motion.h1
-        className="hero-heading"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
-      >
-        Hi, I'm Doina.
-      </motion.h1>
-
-      {/* Smooth changing text with framer motion */}
-      <motion.p
-        className="hero-subheading"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          delay: 1,
-          duration: 1,
-          ease: "easeOut",
-        }}
-      >
-        A Front-end Developer who{" "}
-        <motion.span
-          key={phrases[textIndex]} // This ensures smooth transition between the phrases
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
-        >
-          {phrases[textIndex]}
-        </motion.span>
-      </motion.p>
-
-      {/* Buttons */}
-      <motion.div
-        className="hero-buttons"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-      >
-        <button className="btn btn-download-cv">Download CV</button>
-        <button className="btn btn-contact">Contact</button>
       </motion.div>
     </section>
   );
