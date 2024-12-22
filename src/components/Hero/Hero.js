@@ -1,14 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import BloomingFlower from "./BloomingFlower"; // Import BloomingFlower
 import "./Hero.css";
 
 const Hero = () => {
   const [textIndex, setTextIndex] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(false); // State to track screen size
   const phrases = [
     "<tech with heart />",
     "<code with heart />",
     "<collaborates with heart />",
   ];
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsDesktop(window.innerWidth >= 1024); // Adjust 1024px for desktop breakpoint
+    };
+
+    checkScreenSize(); // Check screen size on initial load
+    window.addEventListener("resize", checkScreenSize); // Update on window resize
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize); // Cleanup on unmount
+    };
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -81,10 +96,15 @@ const Hero = () => {
           ease: "easeOut",
         }}
       >
-        <img
-          src={process.env.PUBLIC_URL + "/assets/images/hero-image.svg"}
-          alt="Animated flower blooming"
-        />
+        {/* Conditionally render BloomingFlower only on desktop */}
+        {isDesktop && <BloomingFlower />}
+        {/* You can also use an image here for mobile */}
+        {!isDesktop && (
+          <img
+            src={process.env.PUBLIC_URL + "/assets/images/hero-image.svg"}
+            alt="Static flower"
+          />
+        )}
       </motion.div>
     </section>
   );
