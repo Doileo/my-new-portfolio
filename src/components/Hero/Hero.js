@@ -5,7 +5,7 @@ import "./Hero.css";
 
 const Hero = () => {
   const [textIndex, setTextIndex] = useState(0);
-  const [isDesktop, setIsDesktop] = useState(false); // State to track screen size
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024); // Initialize based on current screen size
   const phrases = [
     "<tech with heart />",
     "<code with heart />",
@@ -13,15 +13,14 @@ const Hero = () => {
   ];
 
   useEffect(() => {
-    const checkScreenSize = () => {
-      setIsDesktop(window.innerWidth >= 1024); // Adjust 1024px for desktop breakpoint
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024); // Update state based on screen size
     };
 
-    checkScreenSize(); // Check screen size on initial load
-    window.addEventListener("resize", checkScreenSize); // Update on window resize
+    window.addEventListener("resize", handleResize); // Add event listener for resize
 
     return () => {
-      window.removeEventListener("resize", checkScreenSize); // Cleanup on unmount
+      window.removeEventListener("resize", handleResize); // Cleanup on component unmount
     };
   }, []);
 
@@ -97,9 +96,9 @@ const Hero = () => {
         }}
       >
         {/* Conditionally render BloomingFlower only on desktop */}
-        {isDesktop && <BloomingFlower />}
-        {/* You can also use an image here for mobile */}
-        {!isDesktop && (
+        {isDesktop ? (
+          <BloomingFlower />
+        ) : (
           <img
             src={process.env.PUBLIC_URL + "/assets/images/hero-image.svg"}
             alt="Static flower"
