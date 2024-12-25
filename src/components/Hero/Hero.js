@@ -6,6 +6,9 @@ import "./Hero.css";
 const Hero = () => {
   const [textIndex, setTextIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024); // Initialize based on current screen size
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches; // Check if user prefers reduced motion
   const phrases = [
     "<tech with heart />",
     "<code with heart />",
@@ -39,8 +42,8 @@ const Hero = () => {
         <motion.h1
           className="hero-heading"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
+          animate={{ opacity: prefersReducedMotion ? 1 : 1 }}
+          transition={{ delay: 0.5, duration: prefersReducedMotion ? 0 : 1 }}
         >
           Hi, I'm Doina.
         </motion.h1>
@@ -49,10 +52,10 @@ const Hero = () => {
         <motion.p
           className="hero-subheading"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={{ opacity: prefersReducedMotion ? 1 : 1 }}
           transition={{
             delay: 1,
-            duration: 1,
+            duration: prefersReducedMotion ? 0 : 1,
             ease: "easeOut",
           }}
         >
@@ -65,7 +68,10 @@ const Hero = () => {
               y: 0, // Move to original position
             }}
             exit={{ opacity: 0, y: 20 }} // Fade out and move down
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{
+              duration: prefersReducedMotion ? 0 : 1,
+              ease: "easeOut",
+            }}
           >
             {phrases[textIndex]}
           </motion.span>
@@ -75,8 +81,8 @@ const Hero = () => {
         <motion.div
           className="hero-buttons"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
+          animate={{ opacity: prefersReducedMotion ? 1 : 1 }}
+          transition={{ delay: 1.5, duration: prefersReducedMotion ? 0 : 1 }}
         >
           <button className="btn btn-download-cv">Download CV</button>
           <button className="btn btn-contact">Contact</button>
@@ -87,11 +93,11 @@ const Hero = () => {
       <motion.div
         className="hero-image"
         animate={{
-          scale: [0, 1], // From small to normal size (blooming effect)
-          opacity: [0, 1], // Fade in from 0 to full opacity
+          scale: prefersReducedMotion ? [1] : [0, 1], // No scaling animation if prefers reduced motion
+          opacity: prefersReducedMotion ? [1] : [0, 1], // No fade-in animation if prefers reduced motion
         }}
         transition={{
-          duration: 3, // Duration of the blooming effect
+          duration: prefersReducedMotion ? 0 : 3, // Skip transition duration if prefers reduced motion
           ease: "easeOut",
         }}
       >
