@@ -18,6 +18,8 @@
   /* Darker shades for emphasis (used for borders, footer, etc.) */
   --color-darkest-2: hsl(336, 38%, 42%);
 
+  --color-leaf: hsl(288, 22%, 47%);
+
   --font-primary: "Poppins", sans-serif;
   --font-secondary: "Merriweather", serif;
 }
