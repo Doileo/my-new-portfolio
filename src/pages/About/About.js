@@ -6,18 +6,11 @@ const About = () => {
     <>
       {/* Leaf Divider */}
       <div className="leaf-divider" aria-hidden="true">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 100 50"
-          className="leaf-icon"
-        >
-          <path
-            d="M50,10c-15,0-20,12-30,20c10,8,20,16,30,16s20-8,30-16c-10-8-15-20-30-20z"
-            fill="none"
-            stroke="var(--color-accent)"
-            strokeWidth="2"
-          />
-        </svg>
+        <img
+          src="/assets/images/leaf-divider.png"
+          alt=""
+          className="leaf-divider-image"
+        />
       </div>
 
       {/* About Section */}
