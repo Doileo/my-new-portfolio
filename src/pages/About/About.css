@@ -1,6 +1,6 @@
 /* General Styles */
 .about {
-  padding: 3rem 1.5rem;
+  padding: 5rem 1.5rem;
   text-align: center;
   background-color: var(--color-background);
   display: flex;
@@ -20,7 +20,7 @@
 
 .about-title {
   font-family: var(--font-primary);
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   color: var(--color-dark);
   text-align: center;
   margin-bottom: 1.5rem;
@@ -44,18 +44,20 @@
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 5px solid var(--color-accent);
+  border: 3px solid var(--color-accent);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+  filter: brightness(1.05) contrast(1.1);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .about-image:hover {
   transform: scale(1.05);
+  filter: brightness(1.1) contrast(1.2);
 }
 
 .about-text {
-  font-size: 1.125rem;
-  line-height: 1.75;
+  font-size: 1.25rem;
+  line-height: 1.85;
   color: var(--color-dark);
   margin-bottom: 2.5rem;
   text-align: left;
@@ -65,14 +67,13 @@
 .about-cta {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
 }
 
 .about-button {
   background-color: var(--color-accent);
   color: #fff;
-  padding: 12px 25px;
-  font-size: 1rem;
+  padding: 14px 30px;
+  font-size: 1.125rem;
   border-radius: 50px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -81,15 +82,6 @@
 
 .about-button:hover {
   background-color: var(--color-dark);
-  transform: translateY(-2px);
-}
-
-.about-cta .about-button {
-  font-size: 1.125rem;
-  padding: 14px 30px;
-}
-
-.about-cta .about-button:hover {
   transform: translateY(-2px) scale(1.05);
 }
 
@@ -98,14 +90,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3rem 0;
-  padding: 2rem 0;
+  margin: 2rem 0;
+  padding: 1.5rem 0;
 }
 
 .leaf-divider-image {
-  width: 40%;
+  width: 60%;
   height: auto;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 /* Tablet and Desktop Styles */
@@ -131,5 +123,15 @@
   .about-image {
     width: 280px;
     height: 280px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-title {
+    font-size: 3.5rem;
+  }
+
+  .about-text {
+    font-size: 1.35rem;
   }
 }
