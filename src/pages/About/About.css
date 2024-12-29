@@ -70,7 +70,7 @@
 }
 
 .about-button {
-  background-color: var(--color-accent);
+  background-color: var(--color-accent-green);
   color: #fff;
   padding: 14px 30px;
   font-size: 1.125rem;
@@ -81,8 +81,9 @@
 }
 
 .about-button:hover {
-  background-color: var(--color-dark);
+  background-color: #2b6b60;
   transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Leaf Divider Styles */
@@ -107,9 +108,31 @@
   }
 
   .about-container {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .about-image-container {
+    grid-column: 1 / 2;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .about-image {
+    width: 300px;
+    height: 300px;
+    transition: all 0.3s ease;
+  }
+
+  .leaf-divider-image {
+    width: 40%;
+  }
+
+  .about-text {
+    grid-column: 2 / 3;
+    text-align: left;
   }
 
   .about-title {
@@ -120,18 +143,9 @@
     font-size: 1.75rem;
   }
 
-  .about-image {
-    width: 280px;
-    height: 280px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .about-title {
-    font-size: 3.5rem;
-  }
-
-  .about-text {
-    font-size: 1.35rem;
+  .about-cta {
+    grid-column: 2 / 3;
+    margin-top: 1rem;
+    text-align: left;
   }
 }

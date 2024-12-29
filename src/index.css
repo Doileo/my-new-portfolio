@@ -15,6 +15,8 @@
   /* Accent Color - Soft Green for highlights */
   --color-accent: hsl(150, 25%, 60%);
 
+  --color-accent-green: hsl(169, 42%, 36%);
+
   /* Darker shades for emphasis (used for borders, footer, etc.) */
   --color-darkest-2: hsl(336, 38%, 42%);
 
