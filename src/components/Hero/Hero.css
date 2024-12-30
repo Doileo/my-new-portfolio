@@ -102,6 +102,10 @@
     text-align: left;
   }
 
+  .hero-subheading {
+    text-align: center;
+  }
+
   .hero-image {
     width: 50%;
     margin-left: 0;
@@ -146,9 +150,41 @@
   }
 }
 
-/* Large Screens (Min Width: 1400px) */
+/* Large Screens (min width: 1400px) */
 @media (min-width: 1400px) {
   .hero-section {
-    max-width: 1300px;
+    max-width: 1400px;
+    padding: 6rem 4rem;
+    gap: 3rem;
+  }
+
+  .hero-text-container {
+    max-width: 55%;
+    margin-right: 3rem;
+  }
+
+  .hero-heading {
+    font-size: 4rem;
+    line-height: 1.4;
+  }
+
+  .hero-subheading {
+    font-size: 2rem;
+    margin-top: 25px;
+  }
+
+  .hero-buttons {
+    margin-top: 35px;
+    gap: 25px;
+  }
+
+  .hero-image {
+    max-width: 450px;
+    margin-left: 3rem;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
   }
 }
