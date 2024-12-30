@@ -14,7 +14,7 @@ const About = () => {
       </div>
 
       {/* About Section */}
-      <section className="about" aria-labelledby="about-heading">
+      <section id="about" className="about" aria-labelledby="about-heading">
         <div className="about-container">
           <h2 id="about-heading" className="about-title">
             About me
