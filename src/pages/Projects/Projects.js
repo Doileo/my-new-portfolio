@@ -5,8 +5,8 @@ const projects = [
   {
     title: "Kids schedule organizer",
     description:
-      "A tool to help parents organize and manage their children's daily schedules, featuring task management, animations, and a mobile-first design.",
-    techStack: ["React", "CSS3", "JavaScript", "Lighthouse"],
+      "A mobile-first tool for parents to organize their children's daily schedules with task management and animations.",
+    techStack: ["React", "CSS3"],
     github: "https://github.com/Doileo/kids-schedule-organizer",
     live: "https://kids-schedule-organizer.vercel.app/",
     image: "",
@@ -14,8 +14,8 @@ const projects = [
   {
     title: "E-commerce product page",
     description:
-      "A fully responsive e-commerce website featuring a product gallery, sorting options, detailed product pages, a lightbox gallery, and a user-friendly cart system. The project includes additional functionality such as sorting products by category, a 'Back to Top' feature, and interactive elements like a style quiz.",
-    techStack: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+      "A responsive e-commerce site with product galleries, sorting options, and interactive features like a style quiz and cart system.",
+    techStack: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/Doileo/ecommerce-product-page",
     live: "https://ecommerce-product-page-ten-chi.vercel.app/",
     image: "",
@@ -23,15 +23,8 @@ const projects = [
   {
     title: "Multi-step form",
     description:
-      "A dynamic, multi-step form built with React. This project allows users to fill out a form in multiple steps, with validation at each stage, offering a seamless user experience. Features include real-time form validation, conditional rendering based on user input, and a responsive design.",
-    techStack: [
-      "React",
-      "CSS",
-      "JavaScript",
-      "Form Validation",
-      "Responsive Design",
-      "React Router",
-    ],
+      "A dynamic form built in React, featuring multi-step navigation, real-time validation, and responsive design.",
+    techStack: ["React", "CSS", "JavaScript", "React Router"],
     github: "https://github.com/Doileo/multi-step-form",
     live: "https://formnavigator.netlify.app/",
     image: "",
@@ -39,8 +32,8 @@ const projects = [
   {
     title: "Newsletter form app",
     description:
-      "A React-based web application allowing users to subscribe to a newsletter. It includes features like email input validation, error handling, and a success message upon successful submission. The app adapts to various screen sizes, ensuring a smooth mobile-first experience.",
-    techStack: ["React", "CSS", "HTML5", "JavaScript", "Responsive Design"],
+      "A React app for subscribing to newsletters with email validation, error handling, and success notifications, optimized for mobile.",
+    techStack: ["React", "CSS", "JavaScript"],
     github: "https://github.com/Doileo/newsletter-form-app",
     live: "https://newsletter-form-app.netlify.app/",
     image: "",
@@ -48,14 +41,8 @@ const projects = [
   {
     title: "Advice generator app",
     description:
-      "A React app that fetches random advice from an API and displays it to users. The app allows users to refresh and receive a new piece of advice with each click, showcasing how to work with external APIs and dynamically display data.",
-    techStack: [
-      "React",
-      "JavaScript",
-      "CSS",
-      "API Integration",
-      "Responsive Design",
-    ],
+      "A React app that fetches random advice from an API and updates with each click, demonstrating API integration and dynamic data display.",
+    techStack: ["React", "JavaScript", "CSS", "API Integration"],
     github: "https://github.com/Doileo/advice-generator-app",
     live: "https://doileo.github.io/advice-generator-app/",
     image: "",
@@ -63,8 +50,8 @@ const projects = [
   {
     title: "Visualized countries app",
     description:
-      "A simple React app that displays a list of countries, fetching data from a free API. The app allows sorting by name and filtering by region or area size.",
-    techStack: ["React", "CSS", "Flexbox", "Mobile-first design"],
+      "A simple React app displaying a list of countries with sorting and filtering options, fetching data from a free API.",
+    techStack: ["React", "CSS"],
     github: "https://github.com/Doileo/visualized-countries-app",
     live: "https://yourusername.github.io/project-six/",
     image: "",
