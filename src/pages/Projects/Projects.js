@@ -1,6 +1,7 @@
 import React from "react";
 import "./Projects.css";
 
+// Array of projects
 const projects = [
   {
     title: "Kids schedule organizer",
@@ -9,7 +10,7 @@ const projects = [
     techStack: ["React", "CSS3"],
     github: "https://github.com/Doileo/kids-schedule-organizer",
     live: "https://kids-schedule-organizer.vercel.app/",
-    image: "",
+    image: "/assets/icons/schedule-icon.svg",
   },
   {
     title: "E-commerce product page",
@@ -18,7 +19,7 @@ const projects = [
     techStack: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/Doileo/ecommerce-product-page",
     live: "https://ecommerce-product-page-ten-chi.vercel.app/",
-    image: "",
+    image: "/assets/icons/cart-icon.svg",
   },
   {
     title: "Multi-step form",
@@ -27,7 +28,7 @@ const projects = [
     techStack: ["React", "CSS", "JavaScript", "React Router"],
     github: "https://github.com/Doileo/multi-step-form",
     live: "https://formnavigator.netlify.app/",
-    image: "",
+    image: "/assets/icons/form-icon.svg",
   },
   {
     title: "Newsletter form app",
@@ -36,7 +37,7 @@ const projects = [
     techStack: ["React", "CSS", "JavaScript"],
     github: "https://github.com/Doileo/newsletter-form-app",
     live: "https://newsletter-form-app.netlify.app/",
-    image: "",
+    image: "/assets/icons/email-icon.svg",
   },
   {
     title: "Advice generator app",
@@ -45,7 +46,7 @@ const projects = [
     techStack: ["React", "JavaScript", "CSS", "API Integration"],
     github: "https://github.com/Doileo/advice-generator-app",
     live: "https://doileo.github.io/advice-generator-app/",
-    image: "",
+    image: "/assets/icons/quotation-mark-icon.svg",
   },
   {
     title: "Visualized countries app",
@@ -54,7 +55,7 @@ const projects = [
     techStack: ["React", "CSS"],
     github: "https://github.com/Doileo/visualized-countries-app",
     live: "https://yourusername.github.io/project-six/",
-    image: "",
+    image: "/assets/icons/map-icon.svg",
   },
 ];
 
@@ -84,7 +85,13 @@ const Projects = () => {
           <div className="projects-grid">
             {projects.map((project, index) => (
               <div key={index} className="project-card">
-                <h3 className="project-title">{project.title}</h3>
+                {/* Icon and Title */}
+                <div className="project-header">
+                  <div className="project-icon">
+                    <img src={project.image} alt={`${project.title} icon`} />
+                  </div>
+                  <h3 className="project-title">{project.title}</h3>
+                </div>
                 <p className="project-description">{project.description}</p>
                 <ul className="tech-stack">
                   {project.techStack.map((tech, techIndex) => (
