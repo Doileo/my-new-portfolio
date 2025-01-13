@@ -153,13 +153,14 @@
 /* Desktop Styles */
 @media (min-width: 1024px) {
   .about {
-    padding: 6rem 3rem;
+    padding: 6rem 4rem;
     text-align: left;
   }
 
   .about-container {
     grid-template-columns: 1fr 2fr; /* Image takes less space compared to text */
-    gap: 3rem;
+    gap: 1.5rem 5rem;
+    max-width: 1200px;
   }
 
   .about-image-container {
@@ -174,8 +175,9 @@
   }
 
   .about-title {
-    font-size: 3.25rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
+    text-align: left;
   }
 
   .about-subtitle {
@@ -184,10 +186,13 @@
   }
 
   .about-text {
-    font-size: 1.5rem;
     line-height: 2;
     max-width: 800px;
     margin-bottom: 3rem;
+  }
+
+  .about-text p {
+    font-size: 1.25rem;
   }
 
   .about-cta {
@@ -202,5 +207,15 @@
 
   .leaf-divider-image {
     width: 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about {
+    padding: 6rem 2rem;
+  }
+
+  .about-container {
+    max-width: 1400px;
   }
 }
