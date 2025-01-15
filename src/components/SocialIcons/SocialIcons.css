@@ -1,0 +1,88 @@
+.social-icons {
+  position: fixed;
+  right: 20px;
+  bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.social-icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  width: 40px;
+  height: 40px;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.social-icon img {
+  transition: filter 0.3s ease;
+}
+
+.social-icon:hover img {
+  filter: brightness(0.8);
+}
+
+/* Style the Back to Top button */
+.back-to-top {
+  font-size: 24px;
+  color: #bf8fbc;
+  transition: transform 0.3s ease, color 0.3s ease;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* CSS-based Back to Top Arrow (bold and colored) */
+.arrow-up {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 16px solid #bf8fbc;
+}
+
+@media (min-width: 768px) {
+  .social-icons {
+    right: 30px;
+    bottom: 30px;
+    gap: 1.2rem;
+  }
+
+  .social-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .back-to-top {
+    font-size: 28px;
+  }
+}
+
+/* Desktop styles (Min-width: 1024px) */
+@media (min-width: 1024px) {
+  .social-icons {
+    right: 40px;
+    bottom: 40px;
+    gap: 1.5rem;
+  }
+
+  .social-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .back-to-top {
+    font-size: 32px;
+  }
+}
