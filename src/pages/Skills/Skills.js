@@ -11,11 +11,13 @@ const Skills = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            skillsSection.classList.add("visible");
             leaves.forEach((leaf, index) => {
               leaf.classList.add("visible");
               leaf.style.animationDelay = `${0.3 * index}s`; // Staggered delay for each leaf
             });
           } else {
+            skillsSection.classList.remove("visible");
             leaves.forEach((leaf) => {
               leaf.classList.remove("visible");
               leaf.style.animationDelay = "0s"; // Reset delay
@@ -33,6 +35,7 @@ const Skills = () => {
     // Trigger animation after clicking the navbar link
     const onClickHandler = () => {
       setTimeout(() => {
+        skillsSection.classList.add("visible");
         leaves.forEach((leaf, index) => {
           leaf.classList.add("visible");
           leaf.style.animationDelay = `${0.3 * index}s`; // Staggered delay
@@ -49,6 +52,7 @@ const Skills = () => {
     // Check if Skills section is in view on page load (for direct link click)
     if (skillsSection && window.location.hash === "#skills") {
       setTimeout(() => {
+        skillsSection.classList.add("visible");
         leaves.forEach((leaf, index) => {
           leaf.classList.add("visible");
           leaf.style.animationDelay = `${0.3 * index}s`; // Staggered delay
@@ -73,37 +77,37 @@ const Skills = () => {
         curiosity, persistence, and a passion for creating meaningful solutions.
       </p>
       <div className="skills-container">
-        <div className="leaf" style={{ "--delay": "0s" }}>
+        <div className="leaf">
           <img src="/assets/images/leaf-html5.svg" alt="HTML5 skill" />
         </div>
-        <div className="leaf" style={{ "--delay": "0.3s" }}>
+        <div className="leaf">
           <img src="/assets/images/leaf-css3.svg" alt="CSS3 skill" />
         </div>
-        <div className="leaf" style={{ "--delay": "0.6s" }}>
+        <div className="leaf">
           <img
             src="/assets/images/leaf-javascript.svg"
             alt="JavaScript skill"
           />
         </div>
-        <div className="leaf" style={{ "--delay": "0.9s" }}>
+        <div className="leaf">
           <img src="/assets/images/leaf-react.svg" alt="React skill" />
         </div>
-        <div className="leaf" style={{ "--delay": "1.2s" }}>
+        <div className="leaf">
           <img
             src="/assets/images/leaf-accessibility.svg"
             alt="Accessibility skill"
           />
         </div>
-        <div className="leaf" style={{ "--delay": "1.5s" }}>
+        <div className="leaf">
           <img src="/assets/images/leaf-git.svg" alt="Git skill" />
         </div>
-        <div className="leaf" style={{ "--delay": "1.8s" }}>
+        <div className="leaf">
           <img
             src="/assets/images/leaf-responsive-design.svg"
             alt="Responsive Design skill"
           />
         </div>
-        <div className="leaf" style={{ "--delay": "2.1s" }}>
+        <div className="leaf">
           <img src="/assets/images/leaf-figma.svg" alt="Figma skill" />
         </div>
       </div>

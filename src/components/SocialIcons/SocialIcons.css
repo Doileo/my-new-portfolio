@@ -62,7 +62,7 @@
 @media (min-width: 768px) {
   .social-icons {
     display: flex;
-    right: 30px;
+    right: 1px;
     bottom: 30px;
     gap: 1.2rem;
   }

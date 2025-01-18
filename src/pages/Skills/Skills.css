@@ -11,12 +11,12 @@
   justify-content: center;
   opacity: 0;
   transform: translateY(40px); /* Slight downward offset for a soft entrance */
-  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Slow and smooth transition */
 }
 
 .skills-container.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0); /* Elegant upward movement */
 }
 
 .skills-intro {
@@ -34,7 +34,7 @@
   height: 80px;
   opacity: 0;
   transform: scale(0.8) rotate(-10deg); /* Start small and rotated for softness */
-  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out; /* Smooth, gentle transitions */
 }
 
 .leaf.visible {
@@ -70,12 +70,12 @@
 
 /* Hover Effect: Subtle, elegant hover effect */
 .leaf:hover {
-  transform: scale(1.05) rotate(2deg);
-  transition: transform 0.4s ease-in-out;
+  transform: scale(1.05) rotate(2deg); /* Slight hover effect for a gentle pop */
+  transition: transform 0.4s ease-in-out; /* Smooth transition */
 }
 
 .leaf:hover img {
-  filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.1)); /* Soft shadow effect */
 }
 
 /* Mobile Layout: 2 columns, 4 items per column */
