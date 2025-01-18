@@ -1,102 +1,81 @@
 .skills {
   padding: 5rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .skills-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  gap: 20px;
-  opacity: 0; /* Hidden initially */
-  transform: translateY(-50px); /* Start higher */
-  transition: opacity 1s, transform 1s; /* Smooth transition */
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(40px); /* Slight downward offset for a soft entrance */
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .skills-container.visible {
-  opacity: 1; /* Make visible when the section is in view */
-  transform: translateY(0); /* Settle at the final position */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills-intro {
+  line-height: 1.85;
+  color: var(--color-dark);
+  margin-bottom: 2.5rem;
+  text-align: left;
 }
 
 /* Leaf Styling */
 .leaf {
   position: relative;
-  width: 120px;
-  height: 120px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
   opacity: 0;
-  transform: translateY(-50px);
-  animation: leafFallAnimation 1.5s ease-out forwards;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  color: white;
+  transform: scale(0.8) rotate(-10deg); /* Start small and rotated for softness */
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+
+.leaf.visible {
+  opacity: 1;
+  animation: leafGrace 2s ease-out forwards; /* Slow, smooth animation for gracious entrance */
 }
 
 .leaf img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
+  height: auto;
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
 
-/* Text inside leaves */
-.leaf span {
-  position: absolute;
-  font-size: 16px;
-  font-weight: 700;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-/* Smooth natural falling animation */
-@keyframes leafFallAnimation {
+/* Gentle, graceful grow animation */
+@keyframes leafGrace {
   0% {
     opacity: 0;
-    transform: translateY(-50px); /* Start higher */
+    transform: scale(0.8) rotate(-10deg); /* Start small and rotated */
   }
-  60% {
-    opacity: 1;
-    transform: translateY(10px); /* Gentle fall */
+  40% {
+    opacity: 0.2;
+    transform: scale(0.9) rotate(5deg); /* Gentle increase in size */
+  }
+  70% {
+    opacity: 0.5;
+    transform: scale(1.05) rotate(-3deg); /* Slight rotation and growth */
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* Settle at the final position */
+    transform: scale(1) rotate(0deg); /* Full size and reset rotation */
   }
 }
 
-/* Mobile: Staggered delay for each leaf */
-.leaf:nth-child(1) {
-  animation-delay: 0s;
-}
-.leaf:nth-child(2) {
-  animation-delay: 0.3s;
-}
-.leaf:nth-child(3) {
-  animation-delay: 0.6s;
-}
-.leaf:nth-child(4) {
-  animation-delay: 0.9s;
-}
-.leaf:nth-child(5) {
-  animation-delay: 1.2s;
-}
-.leaf:nth-child(6) {
-  animation-delay: 1.5s;
-}
-.leaf:nth-child(7) {
-  animation-delay: 1.8s;
-}
-.leaf:nth-child(8) {
-  animation-delay: 2.1s;
+/* Hover Effect: Subtle, elegant hover effect */
+.leaf:hover {
+  transform: scale(1.05) rotate(2deg);
+  transition: transform 0.4s ease-in-out;
 }
 
-/* Focus state for keyboard accessibility */
-.leaf img:focus {
-  outline: 3px solid #358274;
-  outline-offset: 4px;
+.leaf:hover img {
+  filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.2));
 }
 
 /* Mobile Layout: 2 columns, 4 items per column */
@@ -109,8 +88,8 @@
   }
 
   .leaf {
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
     font-size: 14px;
   }
 }
@@ -133,6 +112,10 @@
 
 /* Desktop Layout: 2 columns, 4 items per column */
 @media (min-width: 1024px) {
+  .skills {
+    padding: 6rem 2rem;
+  }
+
   .skills-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
@@ -140,9 +123,24 @@
     justify-items: center;
   }
 
+  #skills-heading {
+    font-size: 2.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .skills-intro {
+    font-size: 1.25rem;
+  }
+
   .leaf {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .skills {
+    max-width: 1400px;
   }
 }

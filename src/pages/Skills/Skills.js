@@ -4,15 +4,22 @@ import "./Skills.css";
 const Skills = () => {
   useEffect(() => {
     const skillsSection = document.querySelector(".skills-container");
+    const leaves = document.querySelectorAll(".leaf");
 
     // Intersection Observer to trigger animation on scroll
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            skillsSection.classList.add("visible");
+            leaves.forEach((leaf, index) => {
+              leaf.classList.add("visible");
+              leaf.style.animationDelay = `${0.3 * index}s`; // Staggered delay for each leaf
+            });
           } else {
-            skillsSection.classList.remove("visible");
+            leaves.forEach((leaf) => {
+              leaf.classList.remove("visible");
+              leaf.style.animationDelay = "0s"; // Reset delay
+            });
           }
         });
       },
@@ -23,15 +30,18 @@ const Skills = () => {
 
     observer.observe(skillsSection);
 
-    // Trigger animation after scrolling finishes (in case of direct navbar link click)
+    // Trigger animation after clicking the navbar link
     const onClickHandler = () => {
       setTimeout(() => {
-        skillsSection.classList.add("visible");
+        leaves.forEach((leaf, index) => {
+          leaf.classList.add("visible");
+          leaf.style.animationDelay = `${0.3 * index}s`; // Staggered delay
+        });
       }, 500); // Delay to wait for scroll animation to complete
     };
 
     // Add event listener for clicks on navbar link to Skills section
-    const skillsLink = document.querySelector("#skills-link"); // Update this selector to match your Skills link
+    const skillsLink = document.querySelector("#skills-link");
     if (skillsLink) {
       skillsLink.addEventListener("click", onClickHandler);
     }
@@ -39,7 +49,10 @@ const Skills = () => {
     // Check if Skills section is in view on page load (for direct link click)
     if (skillsSection && window.location.hash === "#skills") {
       setTimeout(() => {
-        skillsSection.classList.add("visible");
+        leaves.forEach((leaf, index) => {
+          leaf.classList.add("visible");
+          leaf.style.animationDelay = `${0.3 * index}s`; // Staggered delay
+        });
       }, 500);
     }
 
@@ -54,6 +67,11 @@ const Skills = () => {
   return (
     <section className="skills" id="skills" aria-labelledby="skills-heading">
       <h2 id="skills-heading">My Skills</h2>
+      <p className="skills-intro">
+        I believe that skills are not just tools but the building blocks of
+        impactful projects. Over time, I’ve cultivated these skills through
+        curiosity, persistence, and a passion for creating meaningful solutions.
+      </p>
       <div className="skills-container">
         <div className="leaf" style={{ "--delay": "0s" }}>
           <img src="/assets/images/leaf-html5.svg" alt="HTML5 skill" />
