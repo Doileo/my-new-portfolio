@@ -48,6 +48,13 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
 }
 
 .back-to-top .arrow-up {
@@ -57,6 +64,11 @@
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-bottom: 16px solid #bf8fbc;
+  transition: filter 0.3s ease;
+}
+
+.back-to-top:hover .arrow-up {
+  filter: brightness(0.8);
 }
 
 @media (min-width: 768px) {
