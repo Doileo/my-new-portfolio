@@ -20,6 +20,7 @@
 }
 
 .skills-intro {
+  font-family: var(--font-secondary);
   line-height: 1.85;
   color: var(--color-dark);
   margin-bottom: 2.5rem;
