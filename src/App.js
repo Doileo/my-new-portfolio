@@ -6,6 +6,7 @@ import Projects from "./pages/Projects/Projects";
 import SocialIcons from "./components/SocialIcons/SocialIcons";
 import "./index.css";
 import Skills from "./pages/Skills/Skills";
+import Contact from "./pages/Contact/Contact";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <About />
       <Projects />
       <Skills />
+      <Contact />
 
       {/* Social Icons on the right side */}
       <SocialIcons />

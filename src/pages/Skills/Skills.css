@@ -19,6 +19,10 @@
   transform: translateY(0); /* Elegant upward movement */
 }
 
+#skills-heading {
+  text-align: center;
+}
+
 .skills-intro {
   font-family: var(--font-secondary);
   line-height: 1.85;
@@ -127,6 +131,7 @@
   #skills-heading {
     font-size: 2.5rem;
     margin-bottom: 3.5rem;
+    text-align: left;
   }
 
   .skills-intro {

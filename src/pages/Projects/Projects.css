@@ -21,6 +21,10 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
+#projects-heading {
+  text-align: center;
+}
+
 /* Hover effect for smooth transition */
 .project-card:hover {
   transform: translateY(-12px) scale(1.03);
@@ -148,17 +152,16 @@ li::marker {
 /* Desktop Layout */
 @media (min-width: 1024px) {
   .projects-grid {
-    grid-template-columns: 1fr 1fr 1fr;
     gap: 2.5rem;
+  }
+
+  #projects-heading {
+    text-align: left;
   }
 
   .projects-title {
     font-size: 2.5rem;
     margin-bottom: 3.5rem;
-  }
-
-  .project-title {
-    font-size: 1.875rem;
   }
 
   .project-description {
@@ -175,5 +178,9 @@ li::marker {
   .projects-container {
     padding: 6rem 2rem;
     max-width: 1400px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
