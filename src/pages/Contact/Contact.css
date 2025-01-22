@@ -122,8 +122,8 @@ textarea {
     opacity: 1;
   }
   50% {
-    transform: translateY(-8px) scale(1.02); /* Slight floating and scaling */
-    opacity: 0.98; /* Subtle fade effect */
+    transform: translateY(-8px) scale(1.02);
+    opacity: 0.98;
   }
   100% {
     transform: translateY(0px) scale(1);
@@ -179,7 +179,7 @@ textarea {
 
   .contact-container {
     max-width: 100%;
-    flex-direction: row; /* Changed to row for large screens */
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
