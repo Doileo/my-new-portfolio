@@ -116,6 +116,33 @@ textarea {
   max-width: 80%;
 }
 
+@keyframes float-glow {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02); /* Slight floating and scaling */
+    opacity: 0.98; /* Subtle fade effect */
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+.flower-image {
+  animation: float-glow 8s ease-in-out infinite;
+  transform-origin: center;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.flower-image:hover {
+  transform: scale(1.05);
+}
+
 /* Tablet and Desktop Styles */
 @media (min-width: 768px) {
   .contact-section {
@@ -164,6 +191,7 @@ textarea {
   }
 
   .contact-subtitle {
+    font-size: 1.25rem;
     margin-bottom: 2.5rem;
     text-align: left;
   }

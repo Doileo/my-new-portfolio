@@ -23,8 +23,8 @@ const Contact = () => {
             Get in Touch
           </h2>
           <p className="contact-subtitle">
-            I'd love to hear from you. Whether it’s a project, question, or just
-            a hello—feel free to reach out.
+            Curious about my journey or just looking to chat? I'm here for it.
+            Reach out anytime - let’s connect and see where it takes us.
           </p>
 
           {/* New Wrapper for Form and Flower */}
