@@ -4,7 +4,14 @@ import "./SocialIcons.css";
 
 const SocialIcons = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const scrollStep = -window.scrollY / 2; // Increase this factor to make the scroll faster
+    const scrollAnimation = () => {
+      if (window.scrollY > 0) {
+        window.scrollBy(0, scrollStep); // Move by larger step to scroll faster
+        requestAnimationFrame(scrollAnimation); // Keep scrolling until the top is reached
+      }
+    };
+    requestAnimationFrame(scrollAnimation);
   };
 
   return (
