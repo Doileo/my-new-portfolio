@@ -1,7 +1,34 @@
 import React from "react";
+import emailjs from "emailjs-com"; // Import EmailJS
 import "./Contact.css";
 
 const Contact = () => {
+  const sendEmail = (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    emailjs
+      .sendForm(
+        "service_k2mq36i",
+        "template_84kmkxg",
+        e.target,
+        "NdkmeFqEx8sZ8nMY5"
+      )
+      .then(
+        (result) => {
+          console.log("Message sent successfully:", result.text);
+          alert("Thank you! Your message has been sent successfully.");
+        },
+        (error) => {
+          console.log("Error sending message:", error.text);
+          alert(
+            "Sorry, there was an error sending your message. Please try again."
+          );
+        }
+      );
+
+    e.target.reset(); // Reset the form after submission
+  };
+
   return (
     <>
       {/* Leaf Divider */}
@@ -30,7 +57,7 @@ const Contact = () => {
           {/* New Wrapper for Form and Flower */}
           <div className="form-flower-wrapper">
             {/* Contact Form */}
-            <form className="contact-form" action="#" method="post">
+            <form className="contact-form" onSubmit={sendEmail}>
               <div className="form-group">
                 <label htmlFor="name">Full Name</label>
                 <input
