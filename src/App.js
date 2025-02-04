@@ -7,6 +7,7 @@ import SocialIcons from "./components/SocialIcons/SocialIcons";
 import "./index.css";
 import Skills from "./pages/Skills/Skills";
 import Contact from "./pages/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <Projects />
       <Skills />
       <Contact />
+      <Footer />
 
       {/* Social Icons on the right side */}
       <SocialIcons />
