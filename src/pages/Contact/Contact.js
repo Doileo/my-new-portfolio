@@ -54,6 +54,17 @@ const Contact = () => {
             connect and explore the possibilities.
           </p>
 
+          {/* Direct Email Link for HRs */}
+          <p className="direct-email">
+            Prefer email? You can reach me directly at{" "}
+            <a
+              href="mailto:doina.leovchin.dev@gmail.com"
+              className="email-link"
+            >
+              doina.leovchin.dev@gmail.com
+            </a>
+          </p>
+
           {/* New Wrapper for Form and Flower */}
           <div className="form-flower-wrapper">
             {/* Contact Form */}
