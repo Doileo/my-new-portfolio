@@ -21,7 +21,9 @@ const Footer = () => {
           <a href="#contact">Contact</a>
         </nav>
         <p>
-          © {currentYear} Doina. Crafted with <span class="heart">♥</span>.
+          © {new Date().getFullYear()} Doina |{" "}
+          <strong>Frontend Developer</strong> with a passion for elegant &
+          accessible design. <span className="heart">♥</span>
         </p>
       </div>
     </footer>
