@@ -47,7 +47,7 @@ const Contact = () => {
         <div className="contact-container">
           {/* Heading and Description */}
           <h2 id="contact-heading" className="contact-title">
-            Get in Touch
+            Contact
           </h2>
           <p className="contact-subtitle">
             Excited to bring creativity and accessibility to your team? Let’s

@@ -85,7 +85,16 @@ const Hero = () => {
           transition={{ delay: 1.5, duration: prefersReducedMotion ? 0 : 1 }}
         >
           <button className="btn btn-download-cv">Download CV</button>
-          <button className="btn btn-contact">Contact</button>
+          <button
+            className="btn btn-contact"
+            onClick={() =>
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Contact
+          </button>
         </motion.div>
       </div>
 
