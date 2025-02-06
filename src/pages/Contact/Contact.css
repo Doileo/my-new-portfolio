@@ -216,6 +216,10 @@ textarea {
     text-align: left;
   }
 
+  .direct-email {
+    text-align: left;
+  }
+
   .form-flower-wrapper {
     max-width: 1400px;
     width: 100%;

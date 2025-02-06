@@ -31,11 +31,27 @@
   text-decoration: none;
   color: var(--color-accent-green);
   font-weight: 500;
+  position: relative;
   transition: color 0.3s ease-in-out;
 }
 
+.footer-nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent-green);
+  transition: width 0.3s ease-in-out;
+}
+
 .footer-nav a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-green);
+}
+
+.footer-nav a:hover::before {
+  width: 100%;
 }
 
 .footer p {

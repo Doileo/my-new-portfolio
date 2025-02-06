@@ -22,7 +22,7 @@ const Footer = () => {
         </nav>
         <p>
           © {new Date().getFullYear()} Doina |{" "}
-          <strong>Frontend Developer</strong> with a passion for elegant &
+          <strong>Front-end Developer</strong> with a passion for elegant &
           accessible design. <span className="heart">♥</span>
         </p>
       </div>
