@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+import { useAnimation } from "../../context/AnimationContext"; // Import the custom hook
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { animationsEnabled, toggleAnimations } = useAnimation(); // Access context state
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${animationsEnabled ? "animations-enabled" : ""}`}>
       {/* Logo Section */}
       <a href="#home" className="navbar-logo" aria-label="Go to home">
         <img src="/assets/images/tech-with-heart-logo.png" alt="Logo" />
@@ -58,6 +60,15 @@ const Navbar = () => {
           Contact
         </a>
       </div>
+
+      {/* Toggle Animations Button */}
+      <button
+        className="navbar-toggle-animations"
+        onClick={toggleAnimations}
+        aria-label="Toggle Animations"
+      >
+        {animationsEnabled ? "Animations On" : "Animations Off"}
+      </button>
     </nav>
   );
 };
