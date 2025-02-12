@@ -1,16 +1,13 @@
 import React, { useState } from "react";
+import { useAnimation } from "../../context/AnimationContext"; // Import animation context
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [animationsEnabled, setAnimationsEnabled] = useState(true);
+  const { animationsEnabled, toggleAnimations } = useAnimation(); // Use global animation state
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const toggleAnimations = () => {
-    setAnimationsEnabled(!animationsEnabled);
   };
 
   return (
