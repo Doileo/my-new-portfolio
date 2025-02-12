@@ -82,6 +82,7 @@
   top: 100%;
   left: 0;
   width: 100%;
+  padding: 1.5rem;
   background-color: var(--color-background);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -143,12 +144,51 @@
   }
 }
 
+.navbar-toggle-animations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 13px;
+  background-color: transparent;
+  border: 2px solid var(--color-dark);
+  color: var(--color-dark);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+/* Hover state */
+.navbar-toggle-animations:hover {
+  background-color: var(--color-dark);
+  color: var(--color-background);
+  border-color: var(--color-dark);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.navbar-toggle-animations:focus {
+  outline: 3px solid var(--color-dark);
+  outline-offset: 2px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.navbar-toggle-animations:focus:not(:active) {
+  outline-color: var(--color-dark);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
 /* Desktop-specific Styles */
 @media (min-width: 768px) {
   .navbar {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   }
 
@@ -161,12 +201,12 @@
   .navbar-links {
     display: flex;
     flex-direction: row;
-    gap: 2.5rem;
+    gap: 1.75rem;
     position: static;
     box-shadow: none;
     transform: none;
     opacity: 1;
-    width: 60%;
+    width: 85%;
   }
 
   .navbar-link {
@@ -219,37 +259,7 @@
   }
 
   .navbar-toggle-animations {
-    padding: 12px 25px;
-    background-color: transparent;
-    border: 2px solid var(--color-dark);
-    color: var(--color-dark);
     font-size: 1.125rem;
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Hover state */
-  .navbar-toggle-animations:hover {
-    background-color: var(--color-dark);
-    color: var(--color-background);
-    border-color: var(--color-dark);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-  }
-
-  .navbar-toggle-animations:focus {
-    outline: 3px solid var(--color-dark); /* Visible but subtle outline */
-    outline-offset: 2px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    transform: scale(1.05); /* Slightly scale the button for visual cue */
-  }
-
-  .navbar-toggle-animations:focus:not(:active) {
-    outline-color: var(--color-dark); /* Maintains focus outline color */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* A more subtle shadow */
   }
 
   .navbar-hamburger {
@@ -260,5 +270,10 @@
 @media (min-width: 1024px) {
   .navbar-link {
     font-size: 1.25rem;
+  }
+
+  .navbar-links {
+    gap: 2.5rem;
+    width: 60%;
   }
 }

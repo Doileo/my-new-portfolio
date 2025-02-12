@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-import { useAnimation } from "../../context/AnimationContext"; // Import the custom hook
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { animationsEnabled, toggleAnimations } = useAnimation(); // Access context state
+  const [animationsEnabled, setAnimationsEnabled] = useState(true);
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleAnimations = () => {
+    setAnimationsEnabled(!animationsEnabled);
   };
 
   return (
@@ -33,42 +36,42 @@ const Navbar = () => {
       <div className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
         <a
           href="#about"
-          className="navbar-link"
+          className={`navbar-link ${animationsEnabled ? "animated" : ""}`}
           onClick={() => setIsMenuOpen(false)}
         >
           About
         </a>
         <a
           href="#projects"
-          className="navbar-link"
+          className={`navbar-link ${animationsEnabled ? "animated" : ""}`}
           onClick={() => setIsMenuOpen(false)}
         >
           Projects
         </a>
         <a
           href="#skills"
-          className="navbar-link"
+          className={`navbar-link ${animationsEnabled ? "animated" : ""}`}
           onClick={() => setIsMenuOpen(false)}
         >
           Skills
         </a>
         <a
           href="#contact"
-          className="navbar-link"
+          className={`navbar-link ${animationsEnabled ? "animated" : ""}`}
           onClick={() => setIsMenuOpen(false)}
         >
           Contact
         </a>
-      </div>
 
-      {/* Toggle Animations Button */}
-      <button
-        className="navbar-toggle-animations"
-        onClick={toggleAnimations}
-        aria-label="Toggle Animations"
-      >
-        {animationsEnabled ? "Animations On" : "Animations Off"}
-      </button>
+        {/* Toggle Animations Button inside the navigation links */}
+        <button
+          className="navbar-toggle-animations"
+          onClick={toggleAnimations}
+          aria-label="Toggle Animations"
+        >
+          {animationsEnabled ? "Animations On" : "Animations Off"}
+        </button>
+      </div>
     </nav>
   );
 };
