@@ -1,10 +1,24 @@
 import React, { useEffect } from "react";
+import { useAnimation } from "../../context/AnimationContext";
 import "./Skills.css";
 
 const Skills = () => {
+  const { animationsEnabled } = useAnimation(); // Get animation state
+
   useEffect(() => {
     const skillsSection = document.querySelector(".skills-container");
     const leaves = document.querySelectorAll(".leaf");
+
+    if (!animationsEnabled) {
+      // Ensure the leaves are visible without animation
+      skillsSection.classList.add("visible"); // Add visibility
+      leaves.forEach((leaf) => {
+        leaf.classList.add("visible"); // Make leaves visible
+        leaf.style.animation = "none"; // Disable animation
+        leaf.style.transition = "none"; // Disable transition if any
+      });
+      return;
+    }
 
     // Intersection Observer to trigger animation on scroll
     const observer = new IntersectionObserver(
@@ -14,13 +28,13 @@ const Skills = () => {
             skillsSection.classList.add("visible");
             leaves.forEach((leaf, index) => {
               leaf.classList.add("visible");
-              leaf.style.animationDelay = `${0.3 * index}s`; // Staggered delay for each leaf
+              leaf.style.animationDelay = `${0.3 * index}s`;
             });
           } else {
             skillsSection.classList.remove("visible");
             leaves.forEach((leaf) => {
               leaf.classList.remove("visible");
-              leaf.style.animationDelay = "0s"; // Reset delay
+              leaf.style.animationDelay = "0s";
             });
           }
         });
@@ -32,30 +46,34 @@ const Skills = () => {
 
     observer.observe(skillsSection);
 
-    // Trigger animation after clicking the navbar link
+    // Handle navbar click to trigger animations
     const onClickHandler = () => {
+      if (!animationsEnabled) return; // Don't animate if disabled
       setTimeout(() => {
         skillsSection.classList.add("visible");
         leaves.forEach((leaf, index) => {
           leaf.classList.add("visible");
-          leaf.style.animationDelay = `${0.3 * index}s`; // Staggered delay
+          leaf.style.animationDelay = `${0.3 * index}s`;
         });
-      }, 500); // Delay to wait for scroll animation to complete
+      }, 500);
     };
 
-    // Add event listener for clicks on navbar link to Skills section
     const skillsLink = document.querySelector("#skills-link");
     if (skillsLink) {
       skillsLink.addEventListener("click", onClickHandler);
     }
 
-    // Check if Skills section is in view on page load (for direct link click)
-    if (skillsSection && window.location.hash === "#skills") {
+    // Check if section is in view on load
+    if (
+      skillsSection &&
+      window.location.hash === "#skills" &&
+      animationsEnabled
+    ) {
       setTimeout(() => {
         skillsSection.classList.add("visible");
         leaves.forEach((leaf, index) => {
           leaf.classList.add("visible");
-          leaf.style.animationDelay = `${0.3 * index}s`; // Staggered delay
+          leaf.style.animationDelay = `${0.3 * index}s`;
         });
       }, 500);
     }
@@ -66,7 +84,7 @@ const Skills = () => {
         skillsLink.removeEventListener("click", onClickHandler);
       }
     };
-  }, []);
+  }, [animationsEnabled]); // Re-run effect when animationsEnabled changes
 
   return (
     <section className="skills" id="skills" aria-labelledby="skills-heading">
@@ -76,7 +94,11 @@ const Skills = () => {
         impactful projects. Over time, I’ve cultivated these skills through
         curiosity, persistence, and a passion for creating meaningful solutions.
       </p>
-      <div className="skills-container">
+      <div
+        className={`skills-container ${
+          animationsEnabled ? "" : "no-animation"
+        }`}
+      >
         <div className="leaf">
           <img src="/assets/images/leaf-html5.svg" alt="HTML5 skill" />
         </div>
