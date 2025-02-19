@@ -1,6 +1,6 @@
 import React from "react";
 import emailjs from "emailjs-com"; // Import EmailJS
-import { useAnimation } from "../../context/AnimationContext"; // Import animation context
+import { useAnimation } from "../../context/AnimationContext";
 import "./Contact.css";
 
 const Contact = () => {
