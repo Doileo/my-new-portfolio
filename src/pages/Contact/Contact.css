@@ -134,6 +134,7 @@ textarea {
   max-width: 80%;
 }
 
+/* Floating Animation */
 @keyframes float-glow {
   0% {
     transform: translateY(0px) scale(1);
@@ -157,6 +158,19 @@ textarea {
 
 .flower-image:hover {
   transform: scale(1.05);
+}
+
+/* Disable animation when animationsEnabled is false */
+.no-animation {
+  animation: none !important;
+}
+
+/* Respect user preferences for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .flower-image {
+    animation: none;
+    transform: none;
+  }
 }
 
 /* Tablet and Desktop Styles */
@@ -233,7 +247,7 @@ textarea {
   .contact-form {
     max-width: 600px;
     padding: 2rem;
-    order: 1; /* Ensures the form comes first */
+    order: 1;
   }
 
   .flower-decorator {

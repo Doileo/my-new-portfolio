@@ -1,8 +1,11 @@
 import React from "react";
 import emailjs from "emailjs-com"; // Import EmailJS
+import { useAnimation } from "../../context/AnimationContext"; // Import animation context
 import "./Contact.css";
 
 const Contact = () => {
+  const { animationsEnabled } = useAnimation(); // Access animation state
+
   const sendEmail = (e) => {
     e.preventDefault(); // Prevent default form submission
 
@@ -109,7 +112,9 @@ const Contact = () => {
               <img
                 src="/assets/images/hero-image.svg"
                 alt=""
-                className="flower-image"
+                className={`flower-image ${
+                  animationsEnabled ? "" : "no-animation"
+                }`}
               />
             </div>
           </div>
