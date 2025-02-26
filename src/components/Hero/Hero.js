@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useAnimation } from "../../context/AnimationContext"; // Import animation context
 import BloomingFlower from "./BloomingFlower";
+import Resume from "./Resume";
 import "./Hero.css";
 
 const Hero = () => {
@@ -82,7 +83,8 @@ const Hero = () => {
           animate={{ opacity: animationsEnabled ? 1 : 1 }}
           transition={{ delay: 1.5, duration: animationsEnabled ? 1 : 0 }}
         >
-          <button className="btn btn-download-cv">Download CV</button>
+          {/* Resume component */}
+          <Resume />
           <button
             className="btn btn-contact"
             onClick={() =>
