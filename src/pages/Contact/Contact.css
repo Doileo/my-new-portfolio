@@ -141,8 +141,8 @@ textarea {
     opacity: 1;
   }
   50% {
-    transform: translateY(-8px) scale(1.02);
-    opacity: 0.98;
+    transform: translateY(-12px) scale(1.1);
+    opacity: 0.9;
   }
   100% {
     transform: translateY(0px) scale(1);
@@ -157,7 +157,7 @@ textarea {
 }
 
 .flower-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
 }
 
 /* Disable animation when animationsEnabled is false */
