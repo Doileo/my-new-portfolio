@@ -11,7 +11,11 @@ const Resume = () => {
   };
 
   return (
-    <button className="btn btn-download-cv" onClick={handleDownload}>
+    <button
+      className="btn btn-download-cv"
+      onClick={handleDownload}
+      aria-label="Download CV"
+    >
       Download CV
     </button>
   );
