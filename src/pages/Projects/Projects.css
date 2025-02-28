@@ -133,7 +133,7 @@ li::marker {
 
 .live-link {
   border-color: var(--color-accent);
-  color: var(--color-accent);
+  color: var(--color-accent-green);
 }
 
 .live-link:hover {
