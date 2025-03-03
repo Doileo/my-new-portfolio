@@ -78,7 +78,7 @@ const Contact = () => {
                   type="text"
                   id="name"
                   name="name"
-                  placeholder="Enter your name"
+                  placeholder="Jane Smith"
                   required
                 />
               </div>
@@ -88,7 +88,7 @@ const Contact = () => {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Enter your email"
+                  placeholder="hello@janesmith.dev"
                   required
                 />
               </div>
@@ -97,7 +97,7 @@ const Contact = () => {
                 <textarea
                   id="message"
                   name="message"
-                  placeholder="Write your message"
+                  placeholder="Hey Doina, I love your work! Let's collaborate..."
                   rows="5"
                   required
                 ></textarea>
