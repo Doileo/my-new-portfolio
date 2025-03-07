@@ -2,8 +2,6 @@ import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear(); // Get current year dynamically
-
   return (
     <footer className="footer">
       {/* Leaf Divider */}
