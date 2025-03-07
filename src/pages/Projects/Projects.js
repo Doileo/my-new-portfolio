@@ -4,54 +4,54 @@ import "./Projects.css";
 // Array of projects
 const projects = [
   {
-    title: "Kids schedule organizer",
+    title: "Kids Schedule Organizer",
     description:
-      "A mobile-first tool for parents to organize their children's daily schedules with task management and animations.",
+      "A mobile-first application designed to help parents manage their children's daily routines, complete with task tracking and interactive animations.",
     techStack: ["React", "CSS3"],
     github: "https://github.com/Doileo/kids-schedule-organizer",
     live: "https://kids-schedule-organizer.vercel.app/",
     image: "/assets/icons/schedule-icon.svg",
   },
   {
-    title: "E-commerce product page",
+    title: "E-Commerce Product Page",
     description:
-      "A responsive e-commerce site with product galleries, sorting options, and interactive features like a style quiz and cart system.",
+      "A fully responsive e-commerce page featuring product galleries, sorting functionality, and engaging features like a style quiz and shopping cart.",
     techStack: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/Doileo/ecommerce-product-page",
     live: "https://ecommerce-product-page-ten-chi.vercel.app/",
     image: "/assets/icons/cart-icon.svg",
   },
   {
-    title: "Multi-step form",
+    title: "Multi-Step Form",
     description:
-      "A dynamic form built in React, featuring multi-step navigation, real-time validation, and responsive design.",
+      "A dynamic React form offering a seamless multi-step experience, real-time validation, and a mobile-friendly layout.",
     techStack: ["React", "CSS", "JavaScript", "React Router"],
     github: "https://github.com/Doileo/multi-step-form",
     live: "https://formnavigator.netlify.app/",
     image: "/assets/icons/form-icon.svg",
   },
   {
-    title: "Newsletter form app",
+    title: "Newsletter Subscription App",
     description:
-      "A React app for subscribing to newsletters with email validation, error handling, and success notifications, optimized for mobile.",
+      "A React-based newsletter sign-up platform featuring email validation, error handling, and success messages, optimized for mobile devices.",
     techStack: ["React", "CSS", "JavaScript"],
     github: "https://github.com/Doileo/newsletter-form-app",
     live: "https://newsletter-form-app.netlify.app/",
     image: "/assets/icons/email-icon.svg",
   },
   {
-    title: "Advice generator app",
+    title: "Advice Generator",
     description:
-      "A React app that fetches random advice from an API and updates with each click, demonstrating API integration and dynamic data display.",
+      "A React app that pulls random advice from an API with each click, showcasing API integration and dynamic content updating.",
     techStack: ["React", "JavaScript", "CSS", "API Integration"],
     github: "https://github.com/Doileo/advice-generator-app",
     live: "https://doileo.github.io/advice-generator-app/",
     image: "/assets/icons/quotation-mark-icon.svg",
   },
   {
-    title: "Visualized countries app",
+    title: "Visualized Countries App",
     description:
-      "A simple React app displaying a list of countries with sorting and filtering options, fetching data from a free API.",
+      "A React app that displays a list of countries, with the ability to sort and filter data, fetching information from a free API.",
     techStack: ["React", "CSS"],
     github: "https://github.com/Doileo/visualized-countries-app",
     live: "https://yourusername.github.io/project-six/",
