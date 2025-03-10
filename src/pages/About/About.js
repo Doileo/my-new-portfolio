@@ -30,40 +30,32 @@ const About = () => {
 
           <article className="about-text">
             <p>
-              My journey started in social work, where I learned the invaluable
-              art of truly listening and understanding people’s needs. This
-              foundation of empathy has always been at the core of how I
-              approach problem-solving, both in life and in my work.
+              My journey began in social work, where I learned the power of
+              empathy and truly understanding people’s needs. This foundation
+              guides how I approach problem-solving in both life and work.
             </p>
             <p>
-              After becoming a parent, I took a leap into entrepreneurship,
-              running a small business selling children’s clothes. It wasn’t
-              just about business—it was about connection, community, and
-              creating something meaningful from the ground up.
+              After becoming a parent, I shifted to entrepreneurship, running a
+              small business selling children's clothes. It wasn’t just about
+              business—it was about building meaningful connections and creating
+              something from the ground up.
             </p>
             <p>
-              Five years later, I knew it was time to invest in my future. With
-              the support of my family, I transitioned into tech, focusing on
-              learning and growing as a developer. Completing the Front-End
-              Developer track at Skillcrush ignited my passion for accessible,
-              intuitive design—design that puts the user’s needs at the
-              forefront.
+              Years later, I transitioned into tech with my family’s support,
+              focusing on front-end development. I now build accessible,
+              responsive, and user-friendly web applications using React.js,
+              JavaScript, and CSS, always ensuring accessibility is a key
+              priority in my work.
             </p>
             <p>
-              Along the way, I’ve had the privilege of building a vibrant
-              LinkedIn community, where I continue to learn from amazing
-              individuals. Their insights have shaped my perspective, and I’ve
-              grown in ways I never expected.
+              Along the way, I’ve built a supportive LinkedIn community that
+              continues to shape my growth. Now, I’m excited to bring my unique
+              blend of empathy, creativity, and technical skills to a team where
+              we can collaborate and create something meaningful together.
             </p>
             <p>
-              Now, I’m excited to bring my unique blend of empathy, creativity,
-              and technical skills to a team where I can continue to grow,
-              learn, and contribute.
-            </p>
-            <p>
-              If my journey resonates with you, let’s connect. I would love the
-              opportunity to learn from you, collaborate, and explore how we can
-              create something meaningful together.
+              If my journey resonates, I’d love to connect—let’s explore how we
+              can work together to create impactful solutions.
             </p>
           </article>
 
