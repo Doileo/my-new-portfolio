@@ -93,7 +93,7 @@ const Hero = () => {
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            Let's Connect
+            View My Work
           </button>
         </motion.div>
       </div>
