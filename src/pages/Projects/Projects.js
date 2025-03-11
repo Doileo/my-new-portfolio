@@ -16,7 +16,7 @@ const projects = [
     title: "E-Commerce Product Page",
     description:
       "A fully responsive e-commerce page featuring product galleries, sorting functionality, and engaging features like a style quiz and shopping cart.",
-    techStack: ["HTML", "CSS", "JavaScript"],
+    techStack: ["JavaScript", "HTML", "CSS"],
     github: "https://github.com/Doileo/ecommerce-product-page",
     live: "https://ecommerce-product-page-ten-chi.vercel.app/",
     image: "/assets/icons/cart-icon.svg",
@@ -25,7 +25,7 @@ const projects = [
     title: "Multi-Step Form",
     description:
       "A dynamic React form offering a seamless multi-step experience, real-time validation, and a mobile-friendly layout.",
-    techStack: ["React", "CSS", "JavaScript", "React Router"],
+    techStack: ["JavaScript", "React", "React Router", "CSS"],
     github: "https://github.com/Doileo/multi-step-form",
     live: "https://formnavigator.netlify.app/",
     image: "/assets/icons/form-icon.svg",
@@ -34,7 +34,7 @@ const projects = [
     title: "Newsletter Subscription App",
     description:
       "A React-based newsletter sign-up platform featuring email validation, error handling, and success messages, optimized for mobile devices.",
-    techStack: ["React", "CSS", "JavaScript"],
+    techStack: ["JavaScript", "React", "CSS"],
     github: "https://github.com/Doileo/newsletter-form-app",
     live: "https://newsletter-form-app.netlify.app/",
     image: "/assets/icons/email-icon.svg",
@@ -43,7 +43,7 @@ const projects = [
     title: "Advice Generator",
     description:
       "A React app that pulls random advice from an API with each click, showcasing API integration and dynamic content updating.",
-    techStack: ["React", "JavaScript", "CSS", "API Integration"],
+    techStack: ["JavaScript", "React", "CSS", "API Integration"],
     github: "https://github.com/Doileo/advice-generator-app",
     live: "https://doileo.github.io/advice-generator-app/",
     image: "/assets/icons/quotation-mark-icon.svg",

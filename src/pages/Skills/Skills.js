@@ -100,12 +100,6 @@ const Skills = () => {
         }`}
       >
         <div className="leaf">
-          <img src="/assets/images/leaf-html5.svg" alt="HTML5 skill" />
-        </div>
-        <div className="leaf">
-          <img src="/assets/images/leaf-css3.svg" alt="CSS3 skill" />
-        </div>
-        <div className="leaf">
           <img
             src="/assets/images/leaf-javascript.svg"
             alt="JavaScript skill"
@@ -113,6 +107,12 @@ const Skills = () => {
         </div>
         <div className="leaf">
           <img src="/assets/images/leaf-react.svg" alt="React skill" />
+        </div>
+        <div className="leaf">
+          <img src="/assets/images/leaf-html5.svg" alt="HTML5 skill" />
+        </div>
+        <div className="leaf">
+          <img src="/assets/images/leaf-css3.svg" alt="CSS3 skill" />
         </div>
         <div className="leaf">
           <img
