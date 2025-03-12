@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Kids Schedule Organizer",
     description:
-      "A mobile-first application designed to help parents manage their children's daily routines, complete with task tracking and interactive animations.",
+      "A mobile-friendly planner for parents to organize their children's daily activities with data persistence via local storage. Overcame the challenge of ensuring tasks persist after refresh with a user-friendly interface.",
     techStack: ["React", "CSS3"],
     github: "https://github.com/Doileo/kids-schedule-organizer",
     live: "https://kids-schedule-organizer.vercel.app/",
@@ -15,7 +15,7 @@ const projects = [
   {
     title: "E-Commerce Product Page",
     description:
-      "A fully responsive e-commerce page featuring product galleries, sorting functionality, and engaging features like a style quiz and shopping cart.",
+      "A product page with dynamic cart management, responsive image gallery, and smooth UI interactions. Tackled the challenge of creating an intuitive shopping experience with optimized cart management and UI.",
     techStack: ["JavaScript", "HTML", "CSS"],
     github: "https://github.com/Doileo/ecommerce-product-page",
     live: "https://ecommerce-product-page-ten-chi.vercel.app/",
@@ -24,7 +24,7 @@ const projects = [
   {
     title: "Multi-Step Form",
     description:
-      "A dynamic React form offering a seamless multi-step experience, real-time validation, and a mobile-friendly layout.",
+      "A fully accessible form with real-time validation, error handling, and a progress tracker. Ensured smooth step navigation while keeping data persistent and validating inputs on the go.",
     techStack: ["JavaScript", "React", "React Router", "CSS"],
     github: "https://github.com/Doileo/multi-step-form",
     live: "https://formnavigator.netlify.app/",
@@ -33,7 +33,7 @@ const projects = [
   {
     title: "Newsletter Subscription App",
     description:
-      "A React-based newsletter sign-up platform featuring email validation, error handling, and success messages, optimized for mobile devices.",
+      "An email signup system with real-time validation and instant user feedback for a seamless subscription process. Focused on clear error handling and accessibility.",
     techStack: ["JavaScript", "React", "CSS"],
     github: "https://github.com/Doileo/newsletter-form-app",
     live: "https://newsletter-form-app.netlify.app/",
@@ -42,7 +42,7 @@ const projects = [
   {
     title: "Advice Generator",
     description:
-      "A React app that pulls random advice from an API with each click, showcasing API integration and dynamic content updating.",
+      "An interactive app that fetches random advice from an API and dynamically updates the UI with each click. Addressed the challenge of smooth API data fetching and UI updates.",
     techStack: ["JavaScript", "React", "CSS", "API Integration"],
     github: "https://github.com/Doileo/advice-generator-app",
     live: "https://doileo.github.io/advice-generator-app/",
@@ -51,10 +51,10 @@ const projects = [
   {
     title: "Visualized Countries App",
     description:
-      "A React app that displays a list of countries, with the ability to sort and filter data, fetching information from a free API.",
+      "A React app that displays a list of countries, with sorting and filtering capabilities. Data is fetched from a free API, and performance is optimized through React state management and efficient search functionality.",
     techStack: ["React", "CSS"],
     github: "https://github.com/Doileo/visualized-countries-app",
-    live: "https://yourusername.github.io/project-six/",
+    live: "https://visualized-countries-app.vercel.app/",
     image: "/assets/icons/map-icon.svg",
   },
 ];
@@ -93,6 +93,7 @@ const Projects = () => {
                   <h3 className="project-title">{project.title}</h3>
                 </div>
                 <p className="project-description">{project.description}</p>
+
                 <ul className="tech-stack">
                   {project.techStack.map((tech, techIndex) => (
                     <li key={techIndex} className="tech-item">
