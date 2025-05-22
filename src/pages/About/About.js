@@ -49,10 +49,21 @@ const About = () => {
             </p>
             <p>
               Along the way, I’ve built a supportive LinkedIn community that
-              continues to shape my growth. Now, I’m excited to bring my unique
+              continues to shape my growth. I also write on{" "}
+              <a
+                href="https://substack.com/@doinaleovchin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Substack
+              </a>{" "}
+              to document my tech journey—from mindset shifts to lessons
+              learned—as a way to reflect, connect, and inspire others
+              navigating similar paths. Now, I’m excited to bring my unique
               blend of empathy, creativity, and technical skills to a team where
               we can collaborate and create something meaningful together.
             </p>
+
             <p>
               If my journey resonates, I’d love to connect—let’s explore how we
               can work together to create impactful solutions.
