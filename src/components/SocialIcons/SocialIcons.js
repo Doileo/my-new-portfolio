@@ -39,6 +39,20 @@ const SocialIcons = () => {
           height="30"
         />
       </a>
+      <a
+        href="https://substack.com/@doinaleovchin"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="social-icon"
+        aria-label="Visit Substack profile"
+      >
+        <img
+          src="/assets/icons/substack-icon.svg"
+          alt="Substack profile"
+          width="30"
+          height="30"
+        />
+      </a>
       <button
         className="social-icon back-to-top"
         onClick={scrollToTop}
