@@ -89,7 +89,7 @@ const Hero = () => {
             className="btn btn-contact"
             onClick={() =>
               document
-                .getElementById("contact")
+                .getElementById("projects")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
