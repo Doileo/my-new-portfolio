@@ -14,12 +14,12 @@ My aim was to craft a space that shows not only the _projects_ I've worked on bu
 
 ## 📸 Preview
 
-| Device      | Section                | Screenshot                                                                  |
-| ----------- | ---------------------- | --------------------------------------------------------------------------- |
-| **Mobile**  | Hero Section           | ![Mobile Hero](/assets/screenshots/mobile-hero.png)                         |
-|             | Navigation Menu Opened | ![Mobile Menu Opened](/assets/screenshots/mobile-menu-opened.png)           |
-| **Desktop** | Hero Section           | ![Desktop Hero](/assets/screenshots/desktop-hero.png)                       |
-|             | Animation Toggle Hover | ![Desktop Animation Hover](/assets/screenshots/desktop-animation-hover.png) |
+| Device      | Section                | Screenshot                                                                        |
+| ----------- | ---------------------- | --------------------------------------------------------------------------------- |
+| **Mobile**  | Hero Section           | ![Mobile Hero](public/assets/screenshots/mobile-hero.png)                         |
+|             | Navigation Menu Opened | ![Mobile Menu Opened](public/assets/screenshots/mobile-menu-opened.png)           |
+| **Desktop** | Hero Section           | ![Desktop Hero](public/assets/screenshots/desktop-hero.png)                       |
+|             | Animation Toggle Hover | ![Desktop Animation Hover](public/assets/screenshots/desktop-animation-hover.png) |
 
 ---
 
