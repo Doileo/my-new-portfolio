@@ -20,6 +20,8 @@ My aim was to craft a space that shows not only the _projects_ I've worked on bu
 |             | Navigation Menu Opened | ![Mobile Menu Opened](public/assets/screenshots/mobile-menu-opened.png)           |
 | **Desktop** | Hero Section           | ![Desktop Hero](public/assets/screenshots/desktop-hero.png)                       |
 |             | Animation Toggle Hover | ![Desktop Animation Hover](public/assets/screenshots/desktop-animation-hover.png) |
+|             | Projects Card Hover    | ![Desktop Projects Hover](public/assets/screenshots/desktop-projects-hover.png)   |
+|             | Contact Form           | ![Desktop Contact](public/assets/screenshots/desktop-contact.png)                 |
 
 ---
 
@@ -28,6 +30,7 @@ My aim was to craft a space that shows not only the _projects_ I've worked on bu
 - [Doina Leovchin – Front-End Developer Portfolio](#doina-leovchin--front-end-developer-portfolio)
   - [🌐 Live Demo](#-live-demo)
   - [📸 Preview](#-preview)
+  - [| | Contact Form | |](#--------------contact-form-----------------------------)
   - [📑 Table of Contents](#-table-of-contents)
   - [✨ Highlights](#-highlights)
   - [🛠️ Tech Stack](#️-tech-stack)
