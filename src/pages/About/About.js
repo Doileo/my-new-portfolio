@@ -22,7 +22,7 @@ const About = () => {
 
           <div className="about-image-container">
             <img
-              src="/path/to/your/profile-image.jpg"
+              src="/assets/images/profile-doina.png"
               alt="A friendly portrait of Doina"
               className="about-image"
             />

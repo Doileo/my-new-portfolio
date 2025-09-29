@@ -24,7 +24,6 @@
   color: var(--color-dark);
   text-align: center;
   margin-bottom: 1.5rem;
-  opacity: 1;
 }
 
 .about-subtitle {
@@ -37,17 +36,19 @@
 .about-image-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .about-image {
   width: 250px;
-  height: 250px;
-  border-radius: 50%;
+  height: auto; /* keep full portrait */
+  max-height: 400px; /* prevents excessive height on mobile */
+  border-radius: 12px; /* subtle rounded corners */
   border: 3px solid var(--color-accent);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   filter: brightness(1.05) contrast(1.1);
   transition: transform 0.3s ease, filter 0.3s ease;
+  object-fit: cover; /* keeps image covering container nicely */
 }
 
 .about-image:hover {
@@ -101,7 +102,7 @@
   opacity: 0.8;
 }
 
-/* Tablet and Desktop Styles */
+/* Tablet Styles */
 @media (min-width: 768px) {
   .about {
     padding: 4rem 2rem;
@@ -122,31 +123,25 @@
 
   .about-image {
     width: 300px;
-    height: 300px;
-    transition: all 0.3s ease;
-  }
-
-  .leaf-divider-image {
-    width: 40%;
+    max-height: 500px;
   }
 
   .about-text {
     grid-column: 2 / 3;
-    text-align: left;
   }
 
   .about-title {
     font-size: 3rem;
   }
 
-  .about-subtitle {
-    font-size: 1.75rem;
-  }
-
   .about-cta {
     grid-column: 2 / 3;
     margin-top: 1rem;
     text-align: left;
+  }
+
+  .leaf-divider-image {
+    width: 40%;
   }
 }
 
@@ -158,20 +153,19 @@
   }
 
   .about-container {
-    grid-template-columns: 1fr 2fr; /* Image takes less space compared to text */
+    grid-template-columns: 1fr 2fr;
     gap: 1.5rem 5rem;
     max-width: 1200px;
   }
 
   .about-image-container {
-    justify-self: end; /* Align image to the right for balance */
+    justify-self: end;
     align-self: center;
   }
 
   .about-image {
     width: 350px;
-    height: 350px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    max-height: 600px;
   }
 
   .about-title {
@@ -180,29 +174,13 @@
     text-align: left;
   }
 
-  .about-subtitle {
-    font-size: 2rem;
-    margin-bottom: 2.5rem;
-  }
-
   .about-text {
-    line-height: 2;
     max-width: 800px;
     margin-bottom: 3rem;
   }
 
-  .about-text p {
-    font-size: 1.25rem;
-  }
-
   .about-cta {
     margin-top: 2rem;
-  }
-
-  .about-button {
-    font-size: 1.25rem;
-    padding: 16px 36px;
-    border-radius: 40px;
   }
 
   .leaf-divider-image {
@@ -210,11 +188,8 @@
   }
 }
 
+/* Large Desktop */
 @media (min-width: 1200px) {
-  .about {
-    padding: 6rem 2rem;
-  }
-
   .about-container {
     max-width: 1400px;
   }
